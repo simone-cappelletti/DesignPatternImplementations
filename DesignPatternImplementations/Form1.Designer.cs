@@ -35,8 +35,11 @@
             this.btnSrategyStart = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rtbOutput = new System.Windows.Forms.RichTextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnObserverStart = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -115,11 +118,32 @@
             this.rtbOutput.TabIndex = 0;
             this.rtbOutput.Text = "";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnObserverStart);
+            this.groupBox3.Location = new System.Drawing.Point(12, 109);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(208, 60);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "OBSERVER PATTERN";
+            // 
+            // btnObserverStart
+            // 
+            this.btnObserverStart.Location = new System.Drawing.Point(6, 22);
+            this.btnObserverStart.Name = "btnObserverStart";
+            this.btnObserverStart.Size = new System.Drawing.Size(196, 32);
+            this.btnObserverStart.TabIndex = 1;
+            this.btnObserverStart.Text = "Start";
+            this.btnObserverStart.UseVisualStyleBackColor = true;
+            this.btnObserverStart.Click += new System.EventHandler(this.btnObserverStart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 455);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -127,6 +151,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -140,5 +165,7 @@
         private RadioButton rbRoad;
         private GroupBox groupBox2;
         private RichTextBox rtbOutput;
+        private GroupBox groupBox3;
+        private Button btnObserverStart;
     }
 }
