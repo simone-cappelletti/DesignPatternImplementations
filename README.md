@@ -7,3 +7,6 @@ In the implementation of the strategy pattern, I simulated the handling of vario
 
 ## Observer pattern
 In the implementation of the observer pattern, I recreated the classic publisher/subscriber case where the moment the publisher changes status, all subscribers must also be notified.
+
+## Decorator pattern
+In the implementation of the decorator pattern, I simulated a bartender calculating the cost of his cocktails. So I exploited this pattern to derive the cost of a cocktail from all its basic ingredients.
