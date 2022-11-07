@@ -1,8 +1,9 @@
+using DecoratorPattern;
+using DecoratorPattern.Decorators;
 using ObserverPattern;
 using ObserverPattern.Subscribers;
 using StrategyPattern;
 using StrategyPattern.Strategies;
-using System.Drawing;
 
 namespace DesignPatternImplementations
 {
@@ -56,6 +57,19 @@ namespace DesignPatternImplementations
             rtbOutput.AppendText($"{subscriber1.State}\r\n");
             rtbOutput.AppendText($"{subscriber2.State}\r\n");
             rtbOutput.AppendText($"{subscriber3.State}\r\n");
+        }
+
+        private void btnDecoratorStart_Click(object sender, EventArgs e)
+        {
+            //Let's get a Gin lemon with Gin Mare and Lemon Soda
+            Cocktail ginLemon = new GinLemon();
+
+            var ginLemonWithGinMare = new GinMare(ginLemon);
+            var ginLemonWithGinMareAndLemonSoda = new LemonSoda(ginLemonWithGinMare);
+
+            rtbOutput.AppendText($"You choosed a: {ginLemon.GetDescription()} with Gin Mare and Lemon Soda\r\n");
+            rtbOutput.AppendText($"Base cost of the cocktail: {ginLemon.GetCost()} Euro\r\n");
+            rtbOutput.AppendText($"Final costs: {ginLemonWithGinMareAndLemonSoda.GetCost()} Euro\r\n");
         }
     }
 }

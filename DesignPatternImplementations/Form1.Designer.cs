@@ -37,9 +37,12 @@
             this.rtbOutput = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnObserverStart = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnDecoratorStart = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -138,11 +141,32 @@
             this.btnObserverStart.UseVisualStyleBackColor = true;
             this.btnObserverStart.Click += new System.EventHandler(this.btnObserverStart_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnDecoratorStart);
+            this.groupBox4.Location = new System.Drawing.Point(12, 175);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(208, 60);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "DECORATOR PATTERN";
+            // 
+            // btnDecoratorStart
+            // 
+            this.btnDecoratorStart.Location = new System.Drawing.Point(6, 22);
+            this.btnDecoratorStart.Name = "btnDecoratorStart";
+            this.btnDecoratorStart.Size = new System.Drawing.Size(196, 32);
+            this.btnDecoratorStart.TabIndex = 2;
+            this.btnDecoratorStart.Text = "Start";
+            this.btnDecoratorStart.UseVisualStyleBackColor = true;
+            this.btnDecoratorStart.Click += new System.EventHandler(this.btnDecoratorStart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 455);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -152,6 +176,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -167,5 +192,7 @@
         private RichTextBox rtbOutput;
         private GroupBox groupBox3;
         private Button btnObserverStart;
+        private GroupBox groupBox4;
+        private Button btnDecoratorStart;
     }
 }
