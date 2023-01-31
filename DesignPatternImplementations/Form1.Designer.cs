@@ -39,10 +39,15 @@
             this.btnObserverStart = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnDecoratorStart = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rbTruck = new System.Windows.Forms.RadioButton();
+            this.rbShip = new System.Windows.Forms.RadioButton();
+            this.btnFactoryMethodStart = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -161,11 +166,56 @@
             this.btnDecoratorStart.UseVisualStyleBackColor = true;
             this.btnDecoratorStart.Click += new System.EventHandler(this.btnDecoratorStart_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rbTruck);
+            this.groupBox5.Controls.Add(this.rbShip);
+            this.groupBox5.Controls.Add(this.btnFactoryMethodStart);
+            this.groupBox5.Location = new System.Drawing.Point(226, 13);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(208, 90);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "FACTORY METHOD PATTERN";
+            // 
+            // rbTruck
+            // 
+            this.rbTruck.AutoSize = true;
+            this.rbTruck.Location = new System.Drawing.Point(6, 54);
+            this.rbTruck.Name = "rbTruck";
+            this.rbTruck.Size = new System.Drawing.Size(53, 19);
+            this.rbTruck.TabIndex = 4;
+            this.rbTruck.Text = "Truck";
+            this.rbTruck.UseVisualStyleBackColor = true;
+            // 
+            // rbShip
+            // 
+            this.rbShip.AutoSize = true;
+            this.rbShip.Checked = true;
+            this.rbShip.Location = new System.Drawing.Point(6, 29);
+            this.rbShip.Name = "rbShip";
+            this.rbShip.Size = new System.Drawing.Size(48, 19);
+            this.rbShip.TabIndex = 3;
+            this.rbShip.TabStop = true;
+            this.rbShip.Text = "Ship";
+            this.rbShip.UseVisualStyleBackColor = true;
+            // 
+            // btnFactoryMethodStart
+            // 
+            this.btnFactoryMethodStart.Location = new System.Drawing.Point(127, 21);
+            this.btnFactoryMethodStart.Name = "btnFactoryMethodStart";
+            this.btnFactoryMethodStart.Size = new System.Drawing.Size(75, 59);
+            this.btnFactoryMethodStart.TabIndex = 2;
+            this.btnFactoryMethodStart.Text = "Start";
+            this.btnFactoryMethodStart.UseVisualStyleBackColor = true;
+            this.btnFactoryMethodStart.Click += new System.EventHandler(this.btnFactoryMethodStart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 455);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -177,6 +227,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -194,5 +246,9 @@
         private Button btnObserverStart;
         private GroupBox groupBox4;
         private Button btnDecoratorStart;
+        private GroupBox groupBox5;
+        private Button btnFactoryMethodStart;
+        private RadioButton rbTruck;
+        private RadioButton rbShip;
     }
 }

@@ -1,5 +1,7 @@
 using DecoratorPattern;
 using DecoratorPattern.Decorators;
+using FactoryMethodPattern;
+using FactoryMethodPattern.Factories;
 using ObserverPattern;
 using ObserverPattern.Subscribers;
 using StrategyPattern;
@@ -70,6 +72,22 @@ namespace DesignPatternImplementations
             rtbOutput.AppendText($"You choosed a: {ginLemon.GetDescription()} with Gin Mare and Lemon Soda\r\n");
             rtbOutput.AppendText($"Base cost of the cocktail: {ginLemon.GetCost()} Euro\r\n");
             rtbOutput.AppendText($"Final costs: {ginLemonWithGinMareAndLemonSoda.GetCost()} Euro\r\n");
+        }
+
+        private void btnFactoryMethodStart_Click(object sender, EventArgs e)
+        {
+            ITransport transport = null;
+
+            if (rbShip.Checked)
+            {
+                transport = new ShipFactory().CreateTransport();
+            }
+            else if (rbTruck.Checked)
+            {
+                transport = new TruckFactory().CreateTransport();
+            }
+
+            rtbOutput.AppendText($"{transport?.DeliveryStart()}\r\n");
         }
     }
 }
