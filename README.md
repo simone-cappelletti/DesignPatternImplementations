@@ -10,3 +10,6 @@ In the implementation of the observer pattern, I recreated the classic publisher
 
 ## Decorator pattern
 In the implementation of the decorator pattern, I simulated a bartender calculating the cost of his cocktails. So I exploited this pattern to derive the cost of a cocktail from all its basic ingredients.
+
+## Command pattern
+In the implementation of the command pattern, I simulated an home remote controller which can be used to control some components of an house, as example lights, windows, doors... Every action is implementing with a standalone command, this permits to decouple the logic between the controller and the actions.
