@@ -20,5 +20,13 @@ namespace CommandPattern
         {
             return command.Execute();
         }
+
+        public string UndoCommand()
+        {
+            if (command != null)
+                return command.Undo();
+            else
+                return "No undo action available!";
+        }
     }
 }

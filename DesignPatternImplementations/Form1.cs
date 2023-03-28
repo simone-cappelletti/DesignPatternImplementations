@@ -140,6 +140,11 @@ namespace DesignPatternImplementations
 
             rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.ExecuteCommand()}\r\n");
         }
+
+        private void btnCommandUndo_Click(object sender, EventArgs e)
+        {
+            rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.UndoCommand()}\r\n");
+        }
         #endregion
     }
 }

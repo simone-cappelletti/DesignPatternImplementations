@@ -52,6 +52,7 @@
             btnCommandLivingRoomLightsOff = new Button();
             label1 = new Label();
             btnCommandLivingRoomLightsOn = new Button();
+            btnCommandUndo = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -121,9 +122,9 @@
             // 
             groupBox2.Controls.Add(rtbOutput);
             groupBox2.Dock = DockStyle.Fill;
-            groupBox2.Location = new Point(3, 226);
+            groupBox2.Location = new Point(3, 205);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(945, 431);
+            groupBox2.Size = new Size(945, 389);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "OUTPUT";
@@ -133,7 +134,7 @@
             rtbOutput.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             rtbOutput.Location = new Point(13, 22);
             rtbOutput.Name = "rtbOutput";
-            rtbOutput.Size = new Size(926, 403);
+            rtbOutput.Size = new Size(926, 361);
             rtbOutput.TabIndex = 0;
             rtbOutput.Text = "";
             // 
@@ -182,7 +183,7 @@
             groupBox5.Controls.Add(rbTruck);
             groupBox5.Controls.Add(rbShip);
             groupBox5.Controls.Add(btnFactoryMethodStart);
-            groupBox5.Location = new Point(3, 119);
+            groupBox5.Location = new Point(3, 100);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(208, 90);
             groupBox5.TabIndex = 4;
@@ -234,7 +235,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.8461533F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 66.15385F));
-            tableLayoutPanel1.Size = new Size(951, 660);
+            tableLayoutPanel1.Size = new Size(951, 597);
             tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
@@ -247,20 +248,21 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(945, 217);
+            panel1.Size = new Size(945, 196);
             panel1.TabIndex = 2;
             // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(btnCommandUndo);
             groupBox6.Controls.Add(btnCommandKitchenLightsOff);
             groupBox6.Controls.Add(label2);
             groupBox6.Controls.Add(btnCommandKitchenLightsOn);
             groupBox6.Controls.Add(btnCommandLivingRoomLightsOff);
             groupBox6.Controls.Add(label1);
             groupBox6.Controls.Add(btnCommandLivingRoomLightsOn);
-            groupBox6.Location = new Point(217, 135);
+            groupBox6.Location = new Point(431, 3);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(208, 74);
+            groupBox6.Size = new Size(208, 109);
             groupBox6.TabIndex = 4;
             groupBox6.TabStop = false;
             groupBox6.Text = "COMMAND PATTERN";
@@ -325,11 +327,21 @@
             btnCommandLivingRoomLightsOn.UseVisualStyleBackColor = true;
             btnCommandLivingRoomLightsOn.Click += btnCommandLivingRoomLightsOn_Click;
             // 
+            // btnCommandUndo
+            // 
+            btnCommandUndo.Location = new Point(121, 74);
+            btnCommandUndo.Name = "btnCommandUndo";
+            btnCommandUndo.Size = new Size(78, 29);
+            btnCommandUndo.TabIndex = 6;
+            btnCommandUndo.Text = "Undo";
+            btnCommandUndo.UseVisualStyleBackColor = true;
+            btnCommandUndo.Click += btnCommandUndo_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(951, 660);
+            ClientSize = new Size(951, 597);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
@@ -373,5 +385,6 @@
         private Button btnCommandLivingRoomLightsOff;
         private Label label1;
         private Button btnCommandLivingRoomLightsOn;
+        private Button btnCommandUndo;
     }
 }

@@ -16,5 +16,10 @@ namespace CommandPattern.Commands
         {
             return ligth.Off();
         }
+
+        public string Undo()
+        {
+            return ligth.On();
+        }
     }
 }
