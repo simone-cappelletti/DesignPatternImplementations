@@ -28,209 +28,323 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbPublicTransport = new System.Windows.Forms.RadioButton();
-            this.rbWalking = new System.Windows.Forms.RadioButton();
-            this.rbRoad = new System.Windows.Forms.RadioButton();
-            this.btnSrategyStart = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rtbOutput = new System.Windows.Forms.RichTextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnObserverStart = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnDecoratorStart = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.rbTruck = new System.Windows.Forms.RadioButton();
-            this.rbShip = new System.Windows.Forms.RadioButton();
-            this.btnFactoryMethodStart = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            rbPublicTransport = new RadioButton();
+            rbWalking = new RadioButton();
+            rbRoad = new RadioButton();
+            btnSrategyStart = new Button();
+            groupBox2 = new GroupBox();
+            rtbOutput = new RichTextBox();
+            groupBox3 = new GroupBox();
+            btnObserverStart = new Button();
+            groupBox4 = new GroupBox();
+            btnDecoratorStart = new Button();
+            groupBox5 = new GroupBox();
+            rbTruck = new RadioButton();
+            rbShip = new RadioButton();
+            btnFactoryMethodStart = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            panel1 = new Panel();
+            groupBox6 = new GroupBox();
+            btnCommandKitchenLightsOff = new Button();
+            label2 = new Label();
+            btnCommandKitchenLightsOn = new Button();
+            btnCommandLivingRoomLightsOff = new Button();
+            label1 = new Label();
+            btnCommandLivingRoomLightsOn = new Button();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            groupBox6.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rbPublicTransport);
-            this.groupBox1.Controls.Add(this.rbWalking);
-            this.groupBox1.Controls.Add(this.rbRoad);
-            this.groupBox1.Controls.Add(this.btnSrategyStart);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 91);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "STRATEGY PATTERN";
+            groupBox1.Controls.Add(rbPublicTransport);
+            groupBox1.Controls.Add(rbWalking);
+            groupBox1.Controls.Add(rbRoad);
+            groupBox1.Controls.Add(btnSrategyStart);
+            groupBox1.Location = new Point(3, 3);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(208, 91);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "STRATEGY PATTERN";
             // 
             // rbPublicTransport
             // 
-            this.rbPublicTransport.AutoSize = true;
-            this.rbPublicTransport.Location = new System.Drawing.Point(6, 62);
-            this.rbPublicTransport.Name = "rbPublicTransport";
-            this.rbPublicTransport.Size = new System.Drawing.Size(107, 19);
-            this.rbPublicTransport.TabIndex = 3;
-            this.rbPublicTransport.Text = "PublicTransport";
-            this.rbPublicTransport.UseVisualStyleBackColor = true;
+            rbPublicTransport.AutoSize = true;
+            rbPublicTransport.Location = new Point(6, 62);
+            rbPublicTransport.Name = "rbPublicTransport";
+            rbPublicTransport.Size = new Size(107, 19);
+            rbPublicTransport.TabIndex = 3;
+            rbPublicTransport.Text = "PublicTransport";
+            rbPublicTransport.UseVisualStyleBackColor = true;
             // 
             // rbWalking
             // 
-            this.rbWalking.AutoSize = true;
-            this.rbWalking.Location = new System.Drawing.Point(6, 42);
-            this.rbWalking.Name = "rbWalking";
-            this.rbWalking.Size = new System.Drawing.Size(68, 19);
-            this.rbWalking.TabIndex = 2;
-            this.rbWalking.Text = "Walking";
-            this.rbWalking.UseVisualStyleBackColor = true;
+            rbWalking.AutoSize = true;
+            rbWalking.Location = new Point(6, 42);
+            rbWalking.Name = "rbWalking";
+            rbWalking.Size = new Size(68, 19);
+            rbWalking.TabIndex = 2;
+            rbWalking.Text = "Walking";
+            rbWalking.UseVisualStyleBackColor = true;
             // 
             // rbRoad
             // 
-            this.rbRoad.AutoSize = true;
-            this.rbRoad.Checked = true;
-            this.rbRoad.Location = new System.Drawing.Point(6, 22);
-            this.rbRoad.Name = "rbRoad";
-            this.rbRoad.Size = new System.Drawing.Size(52, 19);
-            this.rbRoad.TabIndex = 1;
-            this.rbRoad.TabStop = true;
-            this.rbRoad.Text = "Road";
-            this.rbRoad.UseVisualStyleBackColor = true;
+            rbRoad.AutoSize = true;
+            rbRoad.Checked = true;
+            rbRoad.Location = new Point(6, 22);
+            rbRoad.Name = "rbRoad";
+            rbRoad.Size = new Size(52, 19);
+            rbRoad.TabIndex = 1;
+            rbRoad.TabStop = true;
+            rbRoad.Text = "Road";
+            rbRoad.UseVisualStyleBackColor = true;
             // 
             // btnSrategyStart
             // 
-            this.btnSrategyStart.Location = new System.Drawing.Point(127, 22);
-            this.btnSrategyStart.Name = "btnSrategyStart";
-            this.btnSrategyStart.Size = new System.Drawing.Size(75, 59);
-            this.btnSrategyStart.TabIndex = 0;
-            this.btnSrategyStart.Text = "Start";
-            this.btnSrategyStart.UseVisualStyleBackColor = true;
-            this.btnSrategyStart.Click += new System.EventHandler(this.btnSrategyStart_Click);
+            btnSrategyStart.Location = new Point(127, 22);
+            btnSrategyStart.Name = "btnSrategyStart";
+            btnSrategyStart.Size = new Size(75, 59);
+            btnSrategyStart.TabIndex = 0;
+            btnSrategyStart.Text = "Start";
+            btnSrategyStart.UseVisualStyleBackColor = true;
+            btnSrategyStart.Click += btnSrategyStart_Click;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rtbOutput);
-            this.groupBox2.Location = new System.Drawing.Point(12, 263);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(512, 180);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "OUTPUT";
+            groupBox2.Controls.Add(rtbOutput);
+            groupBox2.Dock = DockStyle.Fill;
+            groupBox2.Location = new Point(3, 226);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(945, 431);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "OUTPUT";
             // 
             // rtbOutput
             // 
-            this.rtbOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbOutput.Location = new System.Drawing.Point(13, 22);
-            this.rtbOutput.Name = "rtbOutput";
-            this.rtbOutput.Size = new System.Drawing.Size(493, 152);
-            this.rtbOutput.TabIndex = 0;
-            this.rtbOutput.Text = "";
+            rtbOutput.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            rtbOutput.Location = new Point(13, 22);
+            rtbOutput.Name = "rtbOutput";
+            rtbOutput.Size = new Size(926, 403);
+            rtbOutput.TabIndex = 0;
+            rtbOutput.Text = "";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.btnObserverStart);
-            this.groupBox3.Location = new System.Drawing.Point(12, 109);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(208, 60);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "OBSERVER PATTERN";
+            groupBox3.Controls.Add(btnObserverStart);
+            groupBox3.Location = new Point(217, 3);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(208, 60);
+            groupBox3.TabIndex = 2;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "OBSERVER PATTERN";
             // 
             // btnObserverStart
             // 
-            this.btnObserverStart.Location = new System.Drawing.Point(6, 22);
-            this.btnObserverStart.Name = "btnObserverStart";
-            this.btnObserverStart.Size = new System.Drawing.Size(196, 32);
-            this.btnObserverStart.TabIndex = 1;
-            this.btnObserverStart.Text = "Start";
-            this.btnObserverStart.UseVisualStyleBackColor = true;
-            this.btnObserverStart.Click += new System.EventHandler(this.btnObserverStart_Click);
+            btnObserverStart.Location = new Point(6, 22);
+            btnObserverStart.Name = "btnObserverStart";
+            btnObserverStart.Size = new Size(196, 32);
+            btnObserverStart.TabIndex = 1;
+            btnObserverStart.Text = "Start";
+            btnObserverStart.UseVisualStyleBackColor = true;
+            btnObserverStart.Click += btnObserverStart_Click;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.btnDecoratorStart);
-            this.groupBox4.Location = new System.Drawing.Point(12, 175);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(208, 60);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "DECORATOR PATTERN";
+            groupBox4.Controls.Add(btnDecoratorStart);
+            groupBox4.Location = new Point(217, 69);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(208, 60);
+            groupBox4.TabIndex = 3;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "DECORATOR PATTERN";
             // 
             // btnDecoratorStart
             // 
-            this.btnDecoratorStart.Location = new System.Drawing.Point(6, 22);
-            this.btnDecoratorStart.Name = "btnDecoratorStart";
-            this.btnDecoratorStart.Size = new System.Drawing.Size(196, 32);
-            this.btnDecoratorStart.TabIndex = 2;
-            this.btnDecoratorStart.Text = "Start";
-            this.btnDecoratorStart.UseVisualStyleBackColor = true;
-            this.btnDecoratorStart.Click += new System.EventHandler(this.btnDecoratorStart_Click);
+            btnDecoratorStart.Location = new Point(6, 22);
+            btnDecoratorStart.Name = "btnDecoratorStart";
+            btnDecoratorStart.Size = new Size(196, 32);
+            btnDecoratorStart.TabIndex = 2;
+            btnDecoratorStart.Text = "Start";
+            btnDecoratorStart.UseVisualStyleBackColor = true;
+            btnDecoratorStart.Click += btnDecoratorStart_Click;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.rbTruck);
-            this.groupBox5.Controls.Add(this.rbShip);
-            this.groupBox5.Controls.Add(this.btnFactoryMethodStart);
-            this.groupBox5.Location = new System.Drawing.Point(226, 13);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(208, 90);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "FACTORY METHOD PATTERN";
+            groupBox5.Controls.Add(rbTruck);
+            groupBox5.Controls.Add(rbShip);
+            groupBox5.Controls.Add(btnFactoryMethodStart);
+            groupBox5.Location = new Point(3, 119);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(208, 90);
+            groupBox5.TabIndex = 4;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "FACTORY METHOD PATTERN";
             // 
             // rbTruck
             // 
-            this.rbTruck.AutoSize = true;
-            this.rbTruck.Location = new System.Drawing.Point(6, 54);
-            this.rbTruck.Name = "rbTruck";
-            this.rbTruck.Size = new System.Drawing.Size(53, 19);
-            this.rbTruck.TabIndex = 4;
-            this.rbTruck.Text = "Truck";
-            this.rbTruck.UseVisualStyleBackColor = true;
+            rbTruck.AutoSize = true;
+            rbTruck.Location = new Point(6, 54);
+            rbTruck.Name = "rbTruck";
+            rbTruck.Size = new Size(53, 19);
+            rbTruck.TabIndex = 4;
+            rbTruck.Text = "Truck";
+            rbTruck.UseVisualStyleBackColor = true;
             // 
             // rbShip
             // 
-            this.rbShip.AutoSize = true;
-            this.rbShip.Checked = true;
-            this.rbShip.Location = new System.Drawing.Point(6, 29);
-            this.rbShip.Name = "rbShip";
-            this.rbShip.Size = new System.Drawing.Size(48, 19);
-            this.rbShip.TabIndex = 3;
-            this.rbShip.TabStop = true;
-            this.rbShip.Text = "Ship";
-            this.rbShip.UseVisualStyleBackColor = true;
+            rbShip.AutoSize = true;
+            rbShip.Checked = true;
+            rbShip.Location = new Point(6, 29);
+            rbShip.Name = "rbShip";
+            rbShip.Size = new Size(48, 19);
+            rbShip.TabIndex = 3;
+            rbShip.TabStop = true;
+            rbShip.Text = "Ship";
+            rbShip.UseVisualStyleBackColor = true;
             // 
             // btnFactoryMethodStart
             // 
-            this.btnFactoryMethodStart.Location = new System.Drawing.Point(127, 21);
-            this.btnFactoryMethodStart.Name = "btnFactoryMethodStart";
-            this.btnFactoryMethodStart.Size = new System.Drawing.Size(75, 59);
-            this.btnFactoryMethodStart.TabIndex = 2;
-            this.btnFactoryMethodStart.Text = "Start";
-            this.btnFactoryMethodStart.UseVisualStyleBackColor = true;
-            this.btnFactoryMethodStart.Click += new System.EventHandler(this.btnFactoryMethodStart_Click);
+            btnFactoryMethodStart.Location = new Point(127, 21);
+            btnFactoryMethodStart.Name = "btnFactoryMethodStart";
+            btnFactoryMethodStart.Size = new Size(75, 59);
+            btnFactoryMethodStart.TabIndex = 2;
+            btnFactoryMethodStart.Text = "Start";
+            btnFactoryMethodStart.UseVisualStyleBackColor = true;
+            btnFactoryMethodStart.Click += btnFactoryMethodStart_Click;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(groupBox2, 0, 1);
+            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.8461533F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 66.15385F));
+            tableLayoutPanel1.Size = new Size(951, 660);
+            tableLayoutPanel1.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(groupBox6);
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(groupBox5);
+            panel1.Controls.Add(groupBox3);
+            panel1.Controls.Add(groupBox4);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(3, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(945, 217);
+            panel1.TabIndex = 2;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(btnCommandKitchenLightsOff);
+            groupBox6.Controls.Add(label2);
+            groupBox6.Controls.Add(btnCommandKitchenLightsOn);
+            groupBox6.Controls.Add(btnCommandLivingRoomLightsOff);
+            groupBox6.Controls.Add(label1);
+            groupBox6.Controls.Add(btnCommandLivingRoomLightsOn);
+            groupBox6.Location = new Point(217, 135);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(208, 74);
+            groupBox6.TabIndex = 4;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "COMMAND PATTERN";
+            // 
+            // btnCommandKitchenLightsOff
+            // 
+            btnCommandKitchenLightsOff.Location = new Point(163, 47);
+            btnCommandKitchenLightsOff.Name = "btnCommandKitchenLightsOff";
+            btnCommandKitchenLightsOff.Size = new Size(36, 21);
+            btnCommandKitchenLightsOff.TabIndex = 5;
+            btnCommandKitchenLightsOff.Text = "OFF";
+            btnCommandKitchenLightsOff.UseVisualStyleBackColor = true;
+            btnCommandKitchenLightsOff.Click += btnCommandKitchenLightsOff_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(29, 50);
+            label2.Name = "label2";
+            label2.Size = new Size(86, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Kitchen lights:";
+            // 
+            // btnCommandKitchenLightsOn
+            // 
+            btnCommandKitchenLightsOn.Location = new Point(121, 47);
+            btnCommandKitchenLightsOn.Name = "btnCommandKitchenLightsOn";
+            btnCommandKitchenLightsOn.Size = new Size(36, 21);
+            btnCommandKitchenLightsOn.TabIndex = 3;
+            btnCommandKitchenLightsOn.Text = "ON";
+            btnCommandKitchenLightsOn.UseVisualStyleBackColor = true;
+            btnCommandKitchenLightsOn.Click += btnCommandKitchenLightsOn_Click;
+            // 
+            // btnCommandLivingRoomLightsOff
+            // 
+            btnCommandLivingRoomLightsOff.Location = new Point(163, 20);
+            btnCommandLivingRoomLightsOff.Name = "btnCommandLivingRoomLightsOff";
+            btnCommandLivingRoomLightsOff.Size = new Size(36, 21);
+            btnCommandLivingRoomLightsOff.TabIndex = 2;
+            btnCommandLivingRoomLightsOff.Text = "OFF";
+            btnCommandLivingRoomLightsOff.UseVisualStyleBackColor = true;
+            btnCommandLivingRoomLightsOff.Click += btnCommandLivingRoomLightsOff_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(6, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(109, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Living room lights:";
+            // 
+            // btnCommandLivingRoomLightsOn
+            // 
+            btnCommandLivingRoomLightsOn.Location = new Point(121, 20);
+            btnCommandLivingRoomLightsOn.Name = "btnCommandLivingRoomLightsOn";
+            btnCommandLivingRoomLightsOn.Size = new Size(36, 21);
+            btnCommandLivingRoomLightsOn.TabIndex = 0;
+            btnCommandLivingRoomLightsOn.Text = "ON";
+            btnCommandLivingRoomLightsOn.UseVisualStyleBackColor = true;
+            btnCommandLivingRoomLightsOn.Click += btnCommandLivingRoomLightsOn_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 455);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(951, 660);
+            Controls.Add(tableLayoutPanel1);
+            Name = "Form1";
+            Text = "Form1";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -250,5 +364,14 @@
         private Button btnFactoryMethodStart;
         private RadioButton rbTruck;
         private RadioButton rbShip;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panel1;
+        private GroupBox groupBox6;
+        private Button btnCommandKitchenLightsOff;
+        private Label label2;
+        private Button btnCommandKitchenLightsOn;
+        private Button btnCommandLivingRoomLightsOff;
+        private Label label1;
+        private Button btnCommandLivingRoomLightsOn;
     }
 }

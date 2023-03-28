@@ -1,3 +1,7 @@
+using CommandPattern;
+using CommandPattern.Commands;
+using CommandPattern.Entities;
+using CommandPattern.Interfaces;
 using DecoratorPattern;
 using DecoratorPattern.Decorators;
 using FactoryMethodPattern;
@@ -16,6 +20,7 @@ namespace DesignPatternImplementations
             InitializeComponent();
         }
 
+        #region STRATEGY
         private void btnSrategyStart_Click(object sender, EventArgs e)
         {
             IStrategy strategy = new Road();
@@ -41,6 +46,9 @@ namespace DesignPatternImplementations
                 rtbOutput.AppendText($"X:{point.X} - Y:{point.Y}\r\n");
             }
         }
+        #endregion
+
+        #region OBSERVER
 
         private void btnObserverStart_Click(object sender, EventArgs e)
         {
@@ -60,6 +68,9 @@ namespace DesignPatternImplementations
             rtbOutput.AppendText($"{subscriber2.State}\r\n");
             rtbOutput.AppendText($"{subscriber3.State}\r\n");
         }
+        #endregion
+
+        #region DECORATOR
 
         private void btnDecoratorStart_Click(object sender, EventArgs e)
         {
@@ -73,7 +84,9 @@ namespace DesignPatternImplementations
             rtbOutput.AppendText($"Base cost of the cocktail: {ginLemon.GetCost()} Euro\r\n");
             rtbOutput.AppendText($"Final costs: {ginLemonWithGinMareAndLemonSoda.GetCost()} Euro\r\n");
         }
+        #endregion
 
+        #region FACTORY METHOD
         private void btnFactoryMethodStart_Click(object sender, EventArgs e)
         {
             ITransport transport = null;
@@ -89,5 +102,44 @@ namespace DesignPatternImplementations
 
             rtbOutput.AppendText($"{transport?.DeliveryStart()}\r\n");
         }
+        #endregion
+
+        #region COMMAND
+        private void btnCommandLivingRoomLightsOn_Click(object sender, EventArgs e)
+        {
+            ICommand command = new LightOnCommand(new LivingRoomLigth());
+
+            Common.houseRemoteController.SetCommand(command);
+
+            rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.ExecuteCommand()}\r\n");
+        }
+
+        private void btnCommandLivingRoomLightsOff_Click(object sender, EventArgs e)
+        {
+            ICommand command = new LightOffCommand(new LivingRoomLigth());
+
+            Common.houseRemoteController.SetCommand(command);
+
+            rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.ExecuteCommand()}\r\n");
+        }
+
+        private void btnCommandKitchenLightsOn_Click(object sender, EventArgs e)
+        {
+            ICommand command = new LightOnCommand(new KitchenLigth());
+
+            Common.houseRemoteController.SetCommand(command);
+
+            rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.ExecuteCommand()}\r\n");
+        }
+
+        private void btnCommandKitchenLightsOff_Click(object sender, EventArgs e)
+        {
+            ICommand command = new LightOffCommand(new KitchenLigth());
+
+            Common.houseRemoteController.SetCommand(command);
+
+            rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.ExecuteCommand()}\r\n");
+        }
+        #endregion
     }
 }
