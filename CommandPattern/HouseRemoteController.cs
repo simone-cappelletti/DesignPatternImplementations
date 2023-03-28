@@ -5,6 +5,7 @@ namespace CommandPattern
     public class HouseRemoteController
     {
         private ICommand command;
+        private Stack<ICommand> commandQueue = new Stack<ICommand>();
 
         public HouseRemoteController()
         {
@@ -18,12 +19,16 @@ namespace CommandPattern
 
         public string ExecuteCommand()
         {
+            commandQueue.Push(command);
+
             return command.Execute();
         }
 
         public string UndoCommand()
         {
-            if (command != null)
+            ICommand command;
+
+            if (commandQueue.TryPop(out command))
                 return command.Undo();
             else
                 return "No undo action available!";

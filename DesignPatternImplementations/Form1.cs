@@ -1,4 +1,3 @@
-using CommandPattern;
 using CommandPattern.Commands;
 using CommandPattern.Entities;
 using CommandPattern.Interfaces;
@@ -139,6 +138,36 @@ namespace DesignPatternImplementations
             Common.houseRemoteController.SetCommand(command);
 
             rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.ExecuteCommand()}\r\n");
+        }
+
+        private void btnCommandAllLightsOn_Click(object sender, EventArgs e)
+        {
+            var commands = new List<ICommand>()
+            {
+                new LightOnCommand(new LivingRoomLigth()),
+                new LightOnCommand(new KitchenLigth())
+            };
+
+            ICommand command = new AllLightsOnCommand(commands);
+
+            Common.houseRemoteController.SetCommand(command);
+
+            rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.ExecuteCommand()}\r\n");
+        }
+
+        private void btnCommandAllLightsOff_Click(object sender, EventArgs e)
+        {
+            var commands = new List<ICommand>()
+            {
+                new LightOnCommand(new LivingRoomLigth()),
+                new LightOnCommand(new KitchenLigth())
+            };
+
+            ICommand command = new AllLightsOnCommand(commands);
+
+            Common.houseRemoteController.SetCommand(command);
+
+            rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.UndoCommand()}\r\n");
         }
 
         private void btnCommandUndo_Click(object sender, EventArgs e)

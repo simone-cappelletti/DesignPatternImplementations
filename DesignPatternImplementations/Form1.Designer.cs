@@ -46,13 +46,16 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             groupBox6 = new GroupBox();
+            btnCommandUndo = new Button();
             btnCommandKitchenLightsOff = new Button();
             label2 = new Label();
             btnCommandKitchenLightsOn = new Button();
             btnCommandLivingRoomLightsOff = new Button();
             label1 = new Label();
             btnCommandLivingRoomLightsOn = new Button();
-            btnCommandUndo = new Button();
+            label3 = new Label();
+            btnCommandAllLightsOff = new Button();
+            btnCommandAllLightsOn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -253,6 +256,9 @@
             // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(btnCommandAllLightsOff);
+            groupBox6.Controls.Add(btnCommandAllLightsOn);
+            groupBox6.Controls.Add(label3);
             groupBox6.Controls.Add(btnCommandUndo);
             groupBox6.Controls.Add(btnCommandKitchenLightsOff);
             groupBox6.Controls.Add(label2);
@@ -262,10 +268,20 @@
             groupBox6.Controls.Add(btnCommandLivingRoomLightsOn);
             groupBox6.Location = new Point(431, 3);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(208, 109);
+            groupBox6.Size = new Size(208, 187);
             groupBox6.TabIndex = 4;
             groupBox6.TabStop = false;
             groupBox6.Text = "COMMAND PATTERN";
+            // 
+            // btnCommandUndo
+            // 
+            btnCommandUndo.Location = new Point(121, 141);
+            btnCommandUndo.Name = "btnCommandUndo";
+            btnCommandUndo.Size = new Size(78, 29);
+            btnCommandUndo.TabIndex = 6;
+            btnCommandUndo.Text = "Undo";
+            btnCommandUndo.UseVisualStyleBackColor = true;
+            btnCommandUndo.Click += btnCommandUndo_Click;
             // 
             // btnCommandKitchenLightsOff
             // 
@@ -327,15 +343,35 @@
             btnCommandLivingRoomLightsOn.UseVisualStyleBackColor = true;
             btnCommandLivingRoomLightsOn.Click += btnCommandLivingRoomLightsOn_Click;
             // 
-            // btnCommandUndo
+            // label3
             // 
-            btnCommandUndo.Location = new Point(121, 74);
-            btnCommandUndo.Name = "btnCommandUndo";
-            btnCommandUndo.Size = new Size(78, 29);
-            btnCommandUndo.TabIndex = 6;
-            btnCommandUndo.Text = "Undo";
-            btnCommandUndo.UseVisualStyleBackColor = true;
-            btnCommandUndo.Click += btnCommandUndo_Click;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(58, 76);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 15);
+            label3.TabIndex = 7;
+            label3.Text = "All lights:";
+            // 
+            // btnCommandAllLightsOff
+            // 
+            btnCommandAllLightsOff.Location = new Point(163, 73);
+            btnCommandAllLightsOff.Name = "btnCommandAllLightsOff";
+            btnCommandAllLightsOff.Size = new Size(36, 21);
+            btnCommandAllLightsOff.TabIndex = 9;
+            btnCommandAllLightsOff.Text = "OFF";
+            btnCommandAllLightsOff.UseVisualStyleBackColor = true;
+            btnCommandAllLightsOff.Click += btnCommandAllLightsOff_Click;
+            // 
+            // btnCommandAllLightsOn
+            // 
+            btnCommandAllLightsOn.Location = new Point(121, 73);
+            btnCommandAllLightsOn.Name = "btnCommandAllLightsOn";
+            btnCommandAllLightsOn.Size = new Size(36, 21);
+            btnCommandAllLightsOn.TabIndex = 8;
+            btnCommandAllLightsOn.Text = "ON";
+            btnCommandAllLightsOn.UseVisualStyleBackColor = true;
+            btnCommandAllLightsOn.Click += btnCommandAllLightsOn_Click;
             // 
             // Form1
             // 
@@ -386,5 +422,8 @@
         private Label label1;
         private Button btnCommandLivingRoomLightsOn;
         private Button btnCommandUndo;
+        private Button btnCommandAllLightsOff;
+        private Button btnCommandAllLightsOn;
+        private Label label3;
     }
 }
