@@ -13,3 +13,6 @@ In the implementation of the decorator pattern, I simulated a bartender calculat
 
 ## Command pattern
 In the implementation of the command pattern, I simulated an home remote controller which can be used to control some components of an house, as example lights, windows, doors... Every action is implemented like a standalone command, this permits to decouple the logic between the controller and the actions.
+
+## Adapter pattern
+In the implementation of the adapter pattern, I simulated a third-party service returning stock market data in XML format. The client however needs data in JSON format, so it uses the adapter to obtain the data in that format.
