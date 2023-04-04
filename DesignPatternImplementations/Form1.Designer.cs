@@ -46,6 +46,9 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
             groupBox6 = new GroupBox();
+            btnCommandAllLightsOff = new Button();
+            btnCommandAllLightsOn = new Button();
+            label3 = new Label();
             btnCommandUndo = new Button();
             btnCommandKitchenLightsOff = new Button();
             label2 = new Label();
@@ -53,9 +56,8 @@
             btnCommandLivingRoomLightsOff = new Button();
             label1 = new Label();
             btnCommandLivingRoomLightsOn = new Button();
-            label3 = new Label();
-            btnCommandAllLightsOff = new Button();
-            btnCommandAllLightsOn = new Button();
+            groupBox7 = new GroupBox();
+            btnAdapterStart = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -64,6 +66,7 @@
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             groupBox6.SuspendLayout();
+            groupBox7.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -125,9 +128,9 @@
             // 
             groupBox2.Controls.Add(rtbOutput);
             groupBox2.Dock = DockStyle.Fill;
-            groupBox2.Location = new Point(3, 205);
+            groupBox2.Location = new Point(3, 209);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(945, 389);
+            groupBox2.Size = new Size(945, 398);
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "OUTPUT";
@@ -137,7 +140,7 @@
             rtbOutput.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             rtbOutput.Location = new Point(13, 22);
             rtbOutput.Name = "rtbOutput";
-            rtbOutput.Size = new Size(926, 361);
+            rtbOutput.Size = new Size(926, 370);
             rtbOutput.TabIndex = 0;
             rtbOutput.Text = "";
             // 
@@ -186,7 +189,7 @@
             groupBox5.Controls.Add(rbTruck);
             groupBox5.Controls.Add(rbShip);
             groupBox5.Controls.Add(btnFactoryMethodStart);
-            groupBox5.Location = new Point(3, 100);
+            groupBox5.Location = new Point(3, 105);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(208, 90);
             groupBox5.TabIndex = 4;
@@ -238,11 +241,12 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.8461533F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 66.15385F));
-            tableLayoutPanel1.Size = new Size(951, 597);
+            tableLayoutPanel1.Size = new Size(951, 610);
             tableLayoutPanel1.TabIndex = 5;
             // 
             // panel1
             // 
+            panel1.Controls.Add(groupBox7);
             panel1.Controls.Add(groupBox6);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(groupBox5);
@@ -251,7 +255,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(945, 196);
+            panel1.Size = new Size(945, 200);
             panel1.TabIndex = 2;
             // 
             // groupBox6
@@ -268,14 +272,44 @@
             groupBox6.Controls.Add(btnCommandLivingRoomLightsOn);
             groupBox6.Location = new Point(431, 3);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(208, 187);
+            groupBox6.Size = new Size(208, 126);
             groupBox6.TabIndex = 4;
             groupBox6.TabStop = false;
             groupBox6.Text = "COMMAND PATTERN";
             // 
+            // btnCommandAllLightsOff
+            // 
+            btnCommandAllLightsOff.Location = new Point(163, 68);
+            btnCommandAllLightsOff.Name = "btnCommandAllLightsOff";
+            btnCommandAllLightsOff.Size = new Size(36, 21);
+            btnCommandAllLightsOff.TabIndex = 9;
+            btnCommandAllLightsOff.Text = "OFF";
+            btnCommandAllLightsOff.UseVisualStyleBackColor = true;
+            btnCommandAllLightsOff.Click += btnCommandAllLightsOff_Click;
+            // 
+            // btnCommandAllLightsOn
+            // 
+            btnCommandAllLightsOn.Location = new Point(121, 68);
+            btnCommandAllLightsOn.Name = "btnCommandAllLightsOn";
+            btnCommandAllLightsOn.Size = new Size(36, 21);
+            btnCommandAllLightsOn.TabIndex = 8;
+            btnCommandAllLightsOn.Text = "ON";
+            btnCommandAllLightsOn.UseVisualStyleBackColor = true;
+            btnCommandAllLightsOn.Click += btnCommandAllLightsOn_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(58, 72);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 15);
+            label3.TabIndex = 7;
+            label3.Text = "All lights:";
+            // 
             // btnCommandUndo
             // 
-            btnCommandUndo.Location = new Point(121, 141);
+            btnCommandUndo.Location = new Point(121, 91);
             btnCommandUndo.Name = "btnCommandUndo";
             btnCommandUndo.Size = new Size(78, 29);
             btnCommandUndo.TabIndex = 6;
@@ -285,7 +319,7 @@
             // 
             // btnCommandKitchenLightsOff
             // 
-            btnCommandKitchenLightsOff.Location = new Point(163, 47);
+            btnCommandKitchenLightsOff.Location = new Point(163, 44);
             btnCommandKitchenLightsOff.Name = "btnCommandKitchenLightsOff";
             btnCommandKitchenLightsOff.Size = new Size(36, 21);
             btnCommandKitchenLightsOff.TabIndex = 5;
@@ -297,7 +331,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(29, 50);
+            label2.Location = new Point(29, 49);
             label2.Name = "label2";
             label2.Size = new Size(86, 15);
             label2.TabIndex = 4;
@@ -305,7 +339,7 @@
             // 
             // btnCommandKitchenLightsOn
             // 
-            btnCommandKitchenLightsOn.Location = new Point(121, 47);
+            btnCommandKitchenLightsOn.Location = new Point(121, 44);
             btnCommandKitchenLightsOn.Name = "btnCommandKitchenLightsOn";
             btnCommandKitchenLightsOn.Size = new Size(36, 21);
             btnCommandKitchenLightsOn.TabIndex = 3;
@@ -343,41 +377,31 @@
             btnCommandLivingRoomLightsOn.UseVisualStyleBackColor = true;
             btnCommandLivingRoomLightsOn.Click += btnCommandLivingRoomLightsOn_Click;
             // 
-            // label3
+            // groupBox7
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(58, 76);
-            label3.Name = "label3";
-            label3.Size = new Size(57, 15);
-            label3.TabIndex = 7;
-            label3.Text = "All lights:";
+            groupBox7.Controls.Add(btnAdapterStart);
+            groupBox7.Location = new Point(217, 135);
+            groupBox7.Name = "groupBox7";
+            groupBox7.Size = new Size(208, 60);
+            groupBox7.TabIndex = 4;
+            groupBox7.TabStop = false;
+            groupBox7.Text = "ADAPTER PATTERN";
             // 
-            // btnCommandAllLightsOff
+            // btnAdapterStart
             // 
-            btnCommandAllLightsOff.Location = new Point(163, 73);
-            btnCommandAllLightsOff.Name = "btnCommandAllLightsOff";
-            btnCommandAllLightsOff.Size = new Size(36, 21);
-            btnCommandAllLightsOff.TabIndex = 9;
-            btnCommandAllLightsOff.Text = "OFF";
-            btnCommandAllLightsOff.UseVisualStyleBackColor = true;
-            btnCommandAllLightsOff.Click += btnCommandAllLightsOff_Click;
-            // 
-            // btnCommandAllLightsOn
-            // 
-            btnCommandAllLightsOn.Location = new Point(121, 73);
-            btnCommandAllLightsOn.Name = "btnCommandAllLightsOn";
-            btnCommandAllLightsOn.Size = new Size(36, 21);
-            btnCommandAllLightsOn.TabIndex = 8;
-            btnCommandAllLightsOn.Text = "ON";
-            btnCommandAllLightsOn.UseVisualStyleBackColor = true;
-            btnCommandAllLightsOn.Click += btnCommandAllLightsOn_Click;
+            btnAdapterStart.Location = new Point(6, 22);
+            btnAdapterStart.Name = "btnAdapterStart";
+            btnAdapterStart.Size = new Size(196, 32);
+            btnAdapterStart.TabIndex = 2;
+            btnAdapterStart.Text = "Start";
+            btnAdapterStart.UseVisualStyleBackColor = true;
+            btnAdapterStart.Click += btnAdapterStart_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(951, 597);
+            ClientSize = new Size(951, 610);
             Controls.Add(tableLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
@@ -392,6 +416,7 @@
             panel1.ResumeLayout(false);
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
+            groupBox7.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -425,5 +450,7 @@
         private Button btnCommandAllLightsOff;
         private Button btnCommandAllLightsOn;
         private Label label3;
+        private GroupBox groupBox7;
+        private Button btnAdapterStart;
     }
 }

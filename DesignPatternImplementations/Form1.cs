@@ -1,3 +1,4 @@
+using AdapterPattern;
 using CommandPattern.Commands;
 using CommandPattern.Entities;
 using CommandPattern.Interfaces;
@@ -173,6 +174,17 @@ namespace DesignPatternImplementations
         private void btnCommandUndo_Click(object sender, EventArgs e)
         {
             rtbOutput.AppendText($"{DateTime.Now} - {Common.houseRemoteController.UndoCommand()}\r\n");
+        }
+        #endregion
+
+        #region ADAPTER
+        private void btnAdapterStart_Click(object sender, EventArgs e)
+        {
+            var stockMarketService = new StockMarketService();
+            var adapter = new Adapter(stockMarketService);
+
+            rtbOutput.AppendText($"Getting stock market service data:{stockMarketService.GetXmlData()}\r\n");
+            rtbOutput.AppendText($"Getting adapter data:{adapter.GetJsonData()}\r\n");
         }
         #endregion
     }
