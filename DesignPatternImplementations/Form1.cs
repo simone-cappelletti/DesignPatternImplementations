@@ -183,8 +183,8 @@ namespace DesignPatternImplementations
             var stockMarketService = new StockMarketService();
             var adapter = new Adapter(stockMarketService);
 
-            rtbOutput.AppendText($"Getting stock market service data:{stockMarketService.GetXmlData()}\r\n");
-            rtbOutput.AppendText($"Getting adapter data:{adapter.GetJsonData()}\r\n");
+            rtbOutput.AppendText($"Getting stock market service data: {stockMarketService.GetXmlData()}\r\n");
+            rtbOutput.AppendText($"Getting adapter data: {adapter.GetJsonData()}\r\n");
         }
         #endregion
     }
