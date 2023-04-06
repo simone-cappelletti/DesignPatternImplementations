@@ -4,6 +4,7 @@ using CommandPattern.Entities;
 using CommandPattern.Interfaces;
 using DecoratorPattern;
 using DecoratorPattern.Decorators;
+using FacadePattern;
 using FactoryMethodPattern;
 using FactoryMethodPattern.Factories;
 using ObserverPattern;
@@ -185,6 +186,24 @@ namespace DesignPatternImplementations
 
             rtbOutput.AppendText($"Getting stock market service data: {stockMarketService.GetXmlData()}\r\n");
             rtbOutput.AppendText($"Getting adapter data: {adapter.GetJsonData()}\r\n");
+        }
+        #endregion
+
+        #region FACADE
+        private void btnFacadeStart_Click(object sender, EventArgs e)
+        {
+            IHomeTheater homeTheater = new HomeTheater(
+                new FacadePattern.Entities.Amplifier(),
+                new FacadePattern.Entities.Tuner(),
+                new FacadePattern.Entities.StreamingPlayer(),
+                new FacadePattern.Entities.Projector(),
+                new FacadePattern.Entities.TheaterLights(),
+                new FacadePattern.Entities.Screen(),
+                new FacadePattern.Entities.PopcornPopper());
+
+            rtbOutput.AppendText($"{homeTheater.TurnOnHomeTheater("The Lord of the rings")}\r\n");
+            rtbOutput.AppendText("\r\n... 3 hours laters ...\r\n");
+            rtbOutput.AppendText($"{homeTheater.TurnOfHomeTheater()}\r\n");
         }
         #endregion
     }
