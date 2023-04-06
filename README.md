@@ -18,4 +18,4 @@ In the implementation of the command pattern, I simulated an home remote control
 In the implementation of the adapter pattern, I simulated a third-party service returning stock market data in XML format. The client however needs data in JSON format, so it uses the adapter to obtain the data in that format.
 
 ## Facade pattern
-In the implementation of the facade pattern, I simulated a tedious procedure to turn on a home theatre (turn on the screen, the amplifier, turn off the lights...). Using Facade I then wrapped this procedure so that it could be called up more easily by a client.
+In the implementation of the facade pattern, I simulated a tedious procedure to turn on a home theatre (turn on the screen, the amplifier, turn off the lights...). Using Facade I then wrapped this procedure so that it could be invoked more easily by a client.
