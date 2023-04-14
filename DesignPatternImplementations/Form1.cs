@@ -11,6 +11,7 @@ using ObserverPattern;
 using ObserverPattern.Subscribers;
 using StrategyPattern;
 using StrategyPattern.Strategies;
+using TemplateMethodPattern;
 
 namespace DesignPatternImplementations
 {
@@ -204,6 +205,20 @@ namespace DesignPatternImplementations
             rtbOutput.AppendText($"{homeTheater.TurnOnHomeTheater("The Lord of the rings")}\r\n");
             rtbOutput.AppendText("\r\n... 3 hours laters ...\r\n");
             rtbOutput.AppendText($"{homeTheater.TurnOfHomeTheater()}\r\n");
+        }
+        #endregion
+
+        #region TEMPLATE METHOD
+        private void btnTemplateMethodStart_Click(object sender, EventArgs e)
+        {
+            TeaBeverage tea = new TeaBeverage();
+            CoffeBeverage coffee = new CoffeBeverage();
+
+            rtbOutput.AppendText("TEA:\r\n");
+            rtbOutput.AppendText(tea.PrepareCaffeineBeverage());
+            rtbOutput.AppendText("\r\n");
+            rtbOutput.AppendText("COFFEE:\r\n");
+            rtbOutput.AppendText(coffee.PrepareCaffeineBeverage());
         }
         #endregion
     }

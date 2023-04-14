@@ -45,6 +45,8 @@
             btnFactoryMethodStart = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            groupBox8 = new GroupBox();
+            btnFacadeStart = new Button();
             groupBox7 = new GroupBox();
             btnAdapterStart = new Button();
             groupBox6 = new GroupBox();
@@ -58,8 +60,8 @@
             btnCommandLivingRoomLightsOff = new Button();
             label1 = new Label();
             btnCommandLivingRoomLightsOn = new Button();
-            groupBox8 = new GroupBox();
-            btnFacadeStart = new Button();
+            groupBox9 = new GroupBox();
+            btnTemplateMethodStart = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -67,9 +69,10 @@
             groupBox5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
+            groupBox8.SuspendLayout();
             groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
-            groupBox8.SuspendLayout();
+            groupBox9.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -249,6 +252,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(groupBox9);
             panel1.Controls.Add(groupBox8);
             panel1.Controls.Add(groupBox7);
             panel1.Controls.Add(groupBox6);
@@ -261,6 +265,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(945, 200);
             panel1.TabIndex = 2;
+            // 
+            // groupBox8
+            // 
+            groupBox8.Controls.Add(btnFacadeStart);
+            groupBox8.Location = new Point(431, 135);
+            groupBox8.Name = "groupBox8";
+            groupBox8.Size = new Size(208, 60);
+            groupBox8.TabIndex = 5;
+            groupBox8.TabStop = false;
+            groupBox8.Text = "FACADE PATTERN";
+            // 
+            // btnFacadeStart
+            // 
+            btnFacadeStart.Location = new Point(6, 22);
+            btnFacadeStart.Name = "btnFacadeStart";
+            btnFacadeStart.Size = new Size(196, 32);
+            btnFacadeStart.TabIndex = 2;
+            btnFacadeStart.Text = "Start";
+            btnFacadeStart.UseVisualStyleBackColor = true;
+            btnFacadeStart.Click += btnFacadeStart_Click;
             // 
             // groupBox7
             // 
@@ -401,25 +425,25 @@
             btnCommandLivingRoomLightsOn.UseVisualStyleBackColor = true;
             btnCommandLivingRoomLightsOn.Click += btnCommandLivingRoomLightsOn_Click;
             // 
-            // groupBox8
+            // groupBox9
             // 
-            groupBox8.Controls.Add(btnFacadeStart);
-            groupBox8.Location = new Point(431, 135);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(208, 60);
-            groupBox8.TabIndex = 5;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "FACADE PATTERN";
+            groupBox9.Controls.Add(btnTemplateMethodStart);
+            groupBox9.Location = new Point(645, 3);
+            groupBox9.Name = "groupBox9";
+            groupBox9.Size = new Size(208, 60);
+            groupBox9.TabIndex = 6;
+            groupBox9.TabStop = false;
+            groupBox9.Text = "TEMPLATE METHOD PATTERN";
             // 
-            // btnFacadeStart
+            // btnTemplateMethodStart
             // 
-            btnFacadeStart.Location = new Point(6, 22);
-            btnFacadeStart.Name = "btnFacadeStart";
-            btnFacadeStart.Size = new Size(196, 32);
-            btnFacadeStart.TabIndex = 2;
-            btnFacadeStart.Text = "Start";
-            btnFacadeStart.UseVisualStyleBackColor = true;
-            btnFacadeStart.Click += btnFacadeStart_Click;
+            btnTemplateMethodStart.Location = new Point(6, 22);
+            btnTemplateMethodStart.Name = "btnTemplateMethodStart";
+            btnTemplateMethodStart.Size = new Size(196, 32);
+            btnTemplateMethodStart.TabIndex = 2;
+            btnTemplateMethodStart.Text = "Start";
+            btnTemplateMethodStart.UseVisualStyleBackColor = true;
+            btnTemplateMethodStart.Click += btnTemplateMethodStart_Click;
             // 
             // Form1
             // 
@@ -438,10 +462,11 @@
             groupBox5.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            groupBox8.ResumeLayout(false);
             groupBox7.ResumeLayout(false);
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
-            groupBox8.ResumeLayout(false);
+            groupBox9.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -479,5 +504,7 @@
         private Button btnAdapterStart;
         private GroupBox groupBox8;
         private Button btnFacadeStart;
+        private GroupBox groupBox9;
+        private Button btnTemplateMethodStart;
     }
 }
