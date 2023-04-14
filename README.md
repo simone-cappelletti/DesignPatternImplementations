@@ -19,3 +19,6 @@ In the implementation of the adapter pattern, I simulated a third-party service 
 
 ## Facade pattern
 In the implementation of the facade pattern, I simulated a tedious procedure to turn on a home theatre (turn on the screen, the amplifier, turn off the lights...). Using Facade I then wrapped this procedure so that it could be invoked more easily by a client.
+
+## Template method pattern
+In the implementation of the template method pattern, I simulated the preparation of a beverage by defining in an abstract class a sequence of steps to be observed then giving each concrete beverage the possibility of implementing the hook for further operations.
