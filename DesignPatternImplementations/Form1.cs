@@ -234,9 +234,19 @@ namespace DesignPatternImplementations
             collection[2] = new CollectionItem("Item 2");
 
             //Getting iterator
-            Iterator iterator = collection.CreateIterator();
+            IIterator iterator = collection.CreateIterator();
 
-            //iterator.Step = 2;
+            //Setting iteration step
+            var step = (int)nupIteratorStep.Value;
+
+            if (step == 0)
+            {
+                step = 1;
+
+                nupIteratorStep.Value = step;
+            }
+
+            iterator.Step = step;
 
             //Iterating collection
             rtbOutput.AppendText($"Iterating over collection:\r\n");

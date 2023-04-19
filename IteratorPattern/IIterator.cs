@@ -4,7 +4,8 @@
     {
         CollectionItem First();
         CollectionItem Next();
-        bool IsDone { get; }
         CollectionItem CurrentItem { get; }
+        bool IsDone { get; }
+        int Step { get; set; }
     }
 }

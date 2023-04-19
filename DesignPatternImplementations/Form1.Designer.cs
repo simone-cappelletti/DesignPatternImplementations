@@ -45,6 +45,9 @@
             btnFactoryMethodStart = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            groupBox10 = new GroupBox();
+            nupIteratorStep = new NumericUpDown();
+            btnIteratorStart = new Button();
             groupBox9 = new GroupBox();
             btnTemplateMethodStart = new Button();
             groupBox8 = new GroupBox();
@@ -62,8 +65,6 @@
             btnCommandLivingRoomLightsOff = new Button();
             label1 = new Label();
             btnCommandLivingRoomLightsOn = new Button();
-            groupBox10 = new GroupBox();
-            btnIteratorStart = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -71,11 +72,12 @@
             groupBox5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
+            groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nupIteratorStep).BeginInit();
             groupBox9.SuspendLayout();
             groupBox8.SuspendLayout();
             groupBox7.SuspendLayout();
             groupBox6.SuspendLayout();
-            groupBox10.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -270,6 +272,35 @@
             panel1.Size = new Size(945, 200);
             panel1.TabIndex = 2;
             // 
+            // groupBox10
+            // 
+            groupBox10.Controls.Add(nupIteratorStep);
+            groupBox10.Controls.Add(btnIteratorStart);
+            groupBox10.Location = new Point(645, 69);
+            groupBox10.Name = "groupBox10";
+            groupBox10.Size = new Size(208, 60);
+            groupBox10.TabIndex = 7;
+            groupBox10.TabStop = false;
+            groupBox10.Text = "ITERATOR PATTERN";
+            // 
+            // nupIteratorStep
+            // 
+            nupIteratorStep.Location = new Point(6, 26);
+            nupIteratorStep.Name = "nupIteratorStep";
+            nupIteratorStep.Size = new Size(47, 23);
+            nupIteratorStep.TabIndex = 3;
+            nupIteratorStep.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // btnIteratorStart
+            // 
+            btnIteratorStart.Location = new Point(59, 22);
+            btnIteratorStart.Name = "btnIteratorStart";
+            btnIteratorStart.Size = new Size(143, 32);
+            btnIteratorStart.TabIndex = 2;
+            btnIteratorStart.Text = "Start";
+            btnIteratorStart.UseVisualStyleBackColor = true;
+            btnIteratorStart.Click += btnIteratorStart_Click;
+            // 
             // groupBox9
             // 
             groupBox9.Controls.Add(btnTemplateMethodStart);
@@ -449,26 +480,6 @@
             btnCommandLivingRoomLightsOn.UseVisualStyleBackColor = true;
             btnCommandLivingRoomLightsOn.Click += btnCommandLivingRoomLightsOn_Click;
             // 
-            // groupBox10
-            // 
-            groupBox10.Controls.Add(btnIteratorStart);
-            groupBox10.Location = new Point(645, 69);
-            groupBox10.Name = "groupBox10";
-            groupBox10.Size = new Size(208, 60);
-            groupBox10.TabIndex = 7;
-            groupBox10.TabStop = false;
-            groupBox10.Text = "ITERATOR PATTERN";
-            // 
-            // btnIteratorStart
-            // 
-            btnIteratorStart.Location = new Point(6, 22);
-            btnIteratorStart.Name = "btnIteratorStart";
-            btnIteratorStart.Size = new Size(196, 32);
-            btnIteratorStart.TabIndex = 2;
-            btnIteratorStart.Text = "Start";
-            btnIteratorStart.UseVisualStyleBackColor = true;
-            btnIteratorStart.Click += btnIteratorStart_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -486,12 +497,13 @@
             groupBox5.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)nupIteratorStep).EndInit();
             groupBox9.ResumeLayout(false);
             groupBox8.ResumeLayout(false);
             groupBox7.ResumeLayout(false);
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
-            groupBox10.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -533,5 +545,6 @@
         private Button btnTemplateMethodStart;
         private GroupBox groupBox10;
         private Button btnIteratorStart;
+        private NumericUpDown nupIteratorStep;
     }
 }
