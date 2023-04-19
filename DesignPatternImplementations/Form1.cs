@@ -7,6 +7,7 @@ using DecoratorPattern.Decorators;
 using FacadePattern;
 using FactoryMethodPattern;
 using FactoryMethodPattern.Factories;
+using IteratorPattern;
 using ObserverPattern;
 using ObserverPattern.Subscribers;
 using StrategyPattern;
@@ -219,6 +220,33 @@ namespace DesignPatternImplementations
             rtbOutput.AppendText("\r\n");
             rtbOutput.AppendText("COFFEE:\r\n");
             rtbOutput.AppendText(coffee.PrepareCaffeineBeverage());
+        }
+        #endregion
+
+        #region ITERATOR
+        private void btnIteratorStart_Click(object sender, EventArgs e)
+        {
+            //Creating collection
+            Collection collection = new Collection();
+
+            collection[0] = new CollectionItem("Item 0");
+            collection[1] = new CollectionItem("Item 1");
+            collection[2] = new CollectionItem("Item 2");
+
+            //Getting iterator
+            Iterator iterator = collection.CreateIterator();
+
+            //iterator.Step = 2;
+
+            //Iterating collection
+            rtbOutput.AppendText($"Iterating over collection:\r\n");
+
+            for (CollectionItem item = iterator.First(); !iterator.IsDone; item = iterator.Next())
+            {
+                rtbOutput.AppendText($"{item.Name}\r\n");
+            }
+
+            rtbOutput.AppendText($"Iteration ended!\r\n");
         }
         #endregion
     }

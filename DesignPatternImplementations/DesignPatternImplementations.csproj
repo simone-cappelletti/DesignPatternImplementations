@@ -14,6 +14,7 @@
     <ProjectReference Include="..\DecoratorPattern\DecoratorPattern.csproj" />
     <ProjectReference Include="..\FacadePattern\FacadePattern.csproj" />
     <ProjectReference Include="..\FactoryMethodPattern\FactoryMethodPattern.csproj" />
+    <ProjectReference Include="..\IteratorPattern\IteratorPattern.csproj" />
     <ProjectReference Include="..\ObserverPattern\ObserverPattern.csproj" />
     <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj" />
     <ProjectReference Include="..\TemplateMethodPattern\TemplateMethodPattern.csproj" />
