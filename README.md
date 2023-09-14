@@ -25,3 +25,6 @@ In the implementation of the template method pattern, I simulated the preparatio
 
 ## Iterator pattern
 I left the implementation of the iterator pattern generic.
+
+## State pattern
+In the implementation of the state pattern, I simulated the use of a media player with the classic stop, play, previous and next buttons. This allowed me to follow the pattern by having a central object, the so-called context (ie the media player) with a current state that can be changed by the user.
