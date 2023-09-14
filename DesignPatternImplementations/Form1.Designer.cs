@@ -45,6 +45,11 @@
             btnFactoryMethodStart = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            groupBox11 = new GroupBox();
+            btnStateNext = new Button();
+            btnStateStop = new Button();
+            btnStatePrevious = new Button();
+            btnStatePlay = new Button();
             groupBox10 = new GroupBox();
             nupIteratorStep = new NumericUpDown();
             btnIteratorStart = new Button();
@@ -72,6 +77,7 @@
             groupBox5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
+            groupBox11.SuspendLayout();
             groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nupIteratorStep).BeginInit();
             groupBox9.SuspendLayout();
@@ -257,6 +263,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(groupBox11);
             panel1.Controls.Add(groupBox10);
             panel1.Controls.Add(groupBox9);
             panel1.Controls.Add(groupBox8);
@@ -271,6 +278,59 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(945, 200);
             panel1.TabIndex = 2;
+            // 
+            // groupBox11
+            // 
+            groupBox11.Controls.Add(btnStateNext);
+            groupBox11.Controls.Add(btnStateStop);
+            groupBox11.Controls.Add(btnStatePrevious);
+            groupBox11.Controls.Add(btnStatePlay);
+            groupBox11.Location = new Point(645, 140);
+            groupBox11.Name = "groupBox11";
+            groupBox11.Size = new Size(208, 55);
+            groupBox11.TabIndex = 8;
+            groupBox11.TabStop = false;
+            groupBox11.Text = "STATE PATTERN";
+            // 
+            // btnStateNext
+            // 
+            btnStateNext.Location = new Point(108, 17);
+            btnStateNext.Name = "btnStateNext";
+            btnStateNext.Size = new Size(42, 32);
+            btnStateNext.TabIndex = 5;
+            btnStateNext.Text = ">>";
+            btnStateNext.UseVisualStyleBackColor = true;
+            btnStateNext.Click += btnStateNext_Click;
+            // 
+            // btnStateStop
+            // 
+            btnStateStop.Location = new Point(60, 17);
+            btnStateStop.Name = "btnStateStop";
+            btnStateStop.Size = new Size(42, 32);
+            btnStateStop.TabIndex = 4;
+            btnStateStop.Text = "◻︎";
+            btnStateStop.UseVisualStyleBackColor = true;
+            btnStateStop.Click += btnStateStop_Click;
+            // 
+            // btnStatePrevious
+            // 
+            btnStatePrevious.Location = new Point(12, 17);
+            btnStatePrevious.Name = "btnStatePrevious";
+            btnStatePrevious.Size = new Size(42, 32);
+            btnStatePrevious.TabIndex = 3;
+            btnStatePrevious.Text = "<<";
+            btnStatePrevious.UseVisualStyleBackColor = true;
+            btnStatePrevious.Click += btnStatePrevious_Click;
+            // 
+            // btnStatePlay
+            // 
+            btnStatePlay.Location = new Point(156, 17);
+            btnStatePlay.Name = "btnStatePlay";
+            btnStatePlay.Size = new Size(42, 32);
+            btnStatePlay.TabIndex = 2;
+            btnStatePlay.Text = "▶️";
+            btnStatePlay.UseVisualStyleBackColor = true;
+            btnStatePlay.Click += btnStatePlay_Click;
             // 
             // groupBox10
             // 
@@ -497,6 +557,7 @@
             groupBox5.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            groupBox11.ResumeLayout(false);
             groupBox10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)nupIteratorStep).EndInit();
             groupBox9.ResumeLayout(false);
@@ -546,5 +607,10 @@
         private GroupBox groupBox10;
         private Button btnIteratorStart;
         private NumericUpDown nupIteratorStep;
+        private GroupBox groupBox11;
+        private Button btnStatePlay;
+        private Button btnStateNext;
+        private Button btnStateStop;
+        private Button btnStatePrevious;
     }
 }

@@ -10,6 +10,7 @@ using FactoryMethodPattern.Factories;
 using IteratorPattern;
 using ObserverPattern;
 using ObserverPattern.Subscribers;
+using StatePattern;
 using StrategyPattern;
 using StrategyPattern.Strategies;
 using TemplateMethodPattern;
@@ -52,7 +53,6 @@ namespace DesignPatternImplementations
         #endregion
 
         #region OBSERVER
-
         private void btnObserverStart_Click(object sender, EventArgs e)
         {
             var publisher = new Publisher();
@@ -74,7 +74,6 @@ namespace DesignPatternImplementations
         #endregion
 
         #region DECORATOR
-
         private void btnDecoratorStart_Click(object sender, EventArgs e)
         {
             //Let's get a Gin lemon with Gin Mare and Lemon Soda
@@ -212,8 +211,8 @@ namespace DesignPatternImplementations
         #region TEMPLATE METHOD
         private void btnTemplateMethodStart_Click(object sender, EventArgs e)
         {
-            TeaBeverage tea = new TeaBeverage();
-            CoffeBeverage coffee = new CoffeBeverage();
+            var tea = new TeaBeverage();
+            var coffee = new CoffeBeverage();
 
             rtbOutput.AppendText("TEA:\r\n");
             rtbOutput.AppendText(tea.PrepareCaffeineBeverage());
@@ -227,7 +226,7 @@ namespace DesignPatternImplementations
         private void btnIteratorStart_Click(object sender, EventArgs e)
         {
             //Creating collection
-            Collection collection = new Collection();
+            var collection = new Collection();
 
             collection[0] = new CollectionItem("Item 0");
             collection[1] = new CollectionItem("Item 1");
@@ -257,6 +256,28 @@ namespace DesignPatternImplementations
             }
 
             rtbOutput.AppendText($"Iteration ended!\r\n");
+        }
+        #endregion
+
+        #region STATE
+        private void btnStatePlay_Click(object sender, EventArgs e)
+        {
+            rtbOutput.AppendText($"{Common.mediaPlayer.Play()}\r\n");
+        }
+
+        private void btnStateNext_Click(object sender, EventArgs e)
+        {
+            rtbOutput.AppendText($"{Common.mediaPlayer.Next()}\r\n");
+        }
+
+        private void btnStateStop_Click(object sender, EventArgs e)
+        {
+            rtbOutput.AppendText($"{Common.mediaPlayer.Stop()}\r\n");
+        }
+
+        private void btnStatePrevious_Click(object sender, EventArgs e)
+        {
+            rtbOutput.AppendText($"{Common.mediaPlayer.Previous()}\r\n");
         }
         #endregion
     }
